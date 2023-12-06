@@ -43,7 +43,7 @@ for (let i = 0; i < racingBike.length; i++) {
 const { nome, peso } = bikePesoMinore;
 
 // Stampiamo le informazioni sulla bici con il peso minore
-console.log(`La bici più leggera è ${nome} con un peso di ${peso} grammi.`);
+console.log(`La bici più leggera è la ${nome} con un peso di ${peso} grammi.`);
 
 
 // SNACK 2
@@ -141,7 +141,6 @@ let modaList = [
  
 ];
 
-console.log(modaList)
 
 // genero lettera dell'alfabeto in modo randomico, aggiungo proprieta ad ogni oggetto e inserisco tutto in un nuovo array  
 
@@ -162,3 +161,24 @@ let newModaList = modaList.map((elem) => {
 })
 
 console.log(newModaList);
+
+
+// BONUS 2
+
+// mostro a video tutti i risultati dei precedenti snack
+
+// Snack 1
+
+document.getElementById("bike").innerText = `La bici più leggera è la ${nome} con un peso di ${peso} grammi.`;
+
+// Snack 2
+
+document.getElementById("teams").innerText = teamsFouls;
+
+// Bonus1 - Snack 3
+
+const listModa = newModaList.map(item => `<li>${item.nome} - ${item.type} - ${item.position}</li>`).join('');
+
+document.getElementById("moda").innerHTML = `<ul>${listModa}</ul>`;
+
+
