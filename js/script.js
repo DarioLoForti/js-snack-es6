@@ -96,7 +96,9 @@ console.log(teams);
 
 
 // creo nuovo array con soltanto nomi delle squadre e falli subiti
+
 let teamsFouls = [];
+
 teams.forEach((elem) => {
 
     let { nome, falli } = elem;
@@ -105,3 +107,58 @@ teams.forEach((elem) => {
 });
 
 console.log(teamsFouls);
+
+
+// BONUS 1: SNACK 3
+
+// creo arrey di oggetti tramite articoli consegnati nell'esercizio
+
+let modaList = [
+
+    {
+        nome : "Poppy",
+        type : "tshirt",
+        color : "red",
+    },
+
+    {
+        nome : "Jumping ",
+        type : "occhiali ",
+        color : "blue",
+    },
+
+    {
+        nome : "CrissCross",
+        type : "scarpe",
+        color : "black",
+    },
+
+    {
+        nome : "Jenny",
+        type : "borsa",
+        color : "pink",
+    },
+ 
+];
+
+console.log(modaList)
+
+// genero lettera dell'alfabeto in modo randomico, aggiungo proprieta ad ogni oggetto e inserisco tutto in un nuovo array  
+
+let alfabeto = 'abcdefghijklmnopqrstuvwxyz';
+
+let newModaList = modaList.map((elem) => {
+
+    let indiceCasuale = Math.floor(Math.random() * alfabeto.length);
+    let letteraCasuale = alfabeto[indiceCasuale];
+
+    let obj = {
+        nome : elem.nome,
+        type : elem.type,
+        position: letteraCasuale,
+    }
+
+    return obj
+})
+
+console.log(newModaList);
